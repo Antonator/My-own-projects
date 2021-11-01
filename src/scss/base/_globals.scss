@@ -1,0 +1,22 @@
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,*:before, *:after{
+    box-sizing: inherit;
+
+}
+
+body{
+    font-size: 1.6rem;
+    font-family: $roboto;
+}
+
+h1{
+    font-family: $cursive;
+}
+
+a{
+    text-decoration: none;
+}

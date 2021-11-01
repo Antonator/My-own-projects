@@ -1,0 +1,141 @@
+.header{
+    display: flex;
+    flex-direction: column;
+
+    .header-container{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        background: rgb(183,9,76);
+        background: linear-gradient(90deg, rgba(183,9,76,1) 10%, rgba(0,145,173,1) 90%);
+        padding: 0;
+
+    }
+
+    @include tablet{
+        .header-container{
+            padding: 0 2rem;
+        }
+    }
+
+    .main-title{
+        font-size: $big;
+        margin: 2rem;
+    }
+
+    .title-link{
+        color: $white;
+        font-family: $cursive;
+    }
+
+    #menu-icon{
+        z-index: 3
+    }
+
+    @include tablet{
+        #menu-icon{
+            display: none
+        }
+    }
+
+    .navegation_bar{
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        gap: 2rem;
+        background-color: rgba(39,39,39,1);
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        width: 70%;
+        height: 100%;
+        transition: all 0.5s;
+    }
+
+    @include tablet{
+        .navegation_bar{
+            flex-direction: row;
+            justify-content: center;
+            padding-bottom: 0;
+            background-color: unset;
+            width: unset;
+            height: unset;
+            text-align: center;
+            position: unset  
+        }
+    }
+
+    .active{
+
+        margin-left: -70%;
+        transition: all 0.5s;
+
+    }
+
+    @include tablet{
+        .active{
+            margin-left: unset;
+            transition: unset;
+        }
+    }
+
+    .link{
+        border-bottom: 0.3rem solid $white;
+        color: $white;
+        font-size: $medium;
+        font-weight: bold;
+        padding: 2rem;
+
+        &:hover{
+            color: $blue;
+            border-bottom: 0.5rem solid $blue;
+            transition: all 0.3s;
+        }
+    }
+
+    @include tablet{
+
+        .link{
+
+            border-bottom: unset;
+
+        &:hover{
+            color: $purple;
+            border-bottom: 0.5rem solid $purple;
+    
+        }
+
+    }
+
+ 
+
+    }
+
+    .slider{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .slider img{
+        width: 100%;
+        height: 50rem;
+        position: relative;
+        z-index: 0;
+        
+    }
+
+    .slider p{
+        position: absolute;
+        z-index: 1;
+        color: $white;
+        font-weight: bold;
+        font-size: $big;
+        padding: $padding;
+        text-align: center;
+        
+    }
+
+}
